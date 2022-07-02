@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\engine">
+      <UniqueIdentifier>{0dfa0ccd-c184-4818-a98b-efbcf243c5ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\engine\Runtime">
+      <UniqueIdentifier>{0f03122d-58ee-4f3c-8c36-ced6bbd0dcd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\engine\Runtime\Render">
+      <UniqueIdentifier>{ba71cf8f-aee6-481a-8ce7-5b70b1b6597f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Editor">
+      <UniqueIdentifier>{5e0bea4c-f541-4a75-ab43-49898bc5fe32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Editor\source">
+      <UniqueIdentifier>{981315df-e991-4c65-bdba-7df8ae1b55b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Editor\include">
+      <UniqueIdentifier>{907ebb63-db02-441e-b23a-fda3545dab70}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="engine\engine.cpp">
+      <Filter>源文件\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="editor\editor_ui.cpp">
+      <Filter>源文件\Editor\source</Filter>
+    </ClCompile>
+    <ClCompile Include="editor\main.cpp">
+      <Filter>源文件\Editor\source</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Render_pass.cpp">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engine\engine.h">
+      <Filter>源文件\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="editor\editor_ui.h">
+      <Filter>源文件\Editor\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
