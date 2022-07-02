@@ -19,14 +19,28 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="editor\editor.cpp" />
     <ClCompile Include="editor\editor_ui.cpp" />
     <ClCompile Include="editor\main.cpp" />
     <ClCompile Include="engine\engine.cpp" />
     <ClCompile Include="engine\Render_pass.cpp" />
+    <ClCompile Include="engine\Runtime\Render\render_system.cpp" />
+    <ClCompile Include="engine\Runtime\Render\rhi.cpp" />
+    <ClCompile Include="engine\Runtime\Render\RHI\dx12\dx12_rhi.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\Render\window_system.cpp" />
+    <ClCompile Include="engine\Runtime\ui\window_ui.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="editor\editor.h" />
     <ClInclude Include="editor\editor_ui.h" />
     <ClInclude Include="engine\engine.h" />
+    <ClInclude Include="engine\Runtime\Render\render_system.h" />
+    <ClInclude Include="engine\Runtime\Render\rhi.h" />
+    <ClInclude Include="engine\Runtime\Render\RHI\dx12\dx12_rhi.h" />
+    <ClInclude Include="engine\Runtime\Render\window_system.h" />
+    <ClInclude Include="engine\Runtime\ui\window_ui.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -126,10 +140,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>3rdParty\imgui;3rdParty\glfw\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <PerUserRedirection>true</PerUserRedirection>
+      <AdditionalLibraryDirectories>.\x64\debug\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>imgui.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

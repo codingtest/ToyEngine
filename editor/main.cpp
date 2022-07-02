@@ -3,7 +3,7 @@
 #include <thread>
 
 #include "..\engine/engine.h"
-#include "editor_ui.h"
+#include "editor.h"
 
 
 int main(int argc, char **argv) {

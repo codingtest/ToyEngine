@@ -31,12 +31,18 @@
     <Filter Include="源文件\Editor\include">
       <UniqueIdentifier>{907ebb63-db02-441e-b23a-fda3545dab70}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\engine\Runtime\ui">
+      <UniqueIdentifier>{f34b486a-6cce-4e77-8b73-46e5c2e32f67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\engine\Runtime\Render\rhi">
+      <UniqueIdentifier>{e580e0eb-0b52-4de1-9e97-bab3be2bec9d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="engine\engine.cpp">
       <Filter>源文件\engine</Filter>
     </ClCompile>
-    <ClCompile Include="editor\editor_ui.cpp">
+    <ClCompile Include="editor\editor.cpp">
       <Filter>源文件\Editor\source</Filter>
     </ClCompile>
     <ClCompile Include="editor\main.cpp">
@@ -45,13 +51,49 @@
     <ClCompile Include="engine\Render_pass.cpp">
       <Filter>源文件\engine\Runtime\Render</Filter>
     </ClCompile>
+    <ClCompile Include="engine\Runtime\ui\window_ui.cpp">
+      <Filter>源文件\engine\Runtime\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="editor\editor_ui.cpp">
+      <Filter>源文件\Editor\source</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\Render\RHI\dx12\dx12_rhi.cpp">
+      <Filter>源文件\engine\Runtime\Render\rhi</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\Render\rhi.cpp">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\Render\render_system.cpp">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\Render\window_system.cpp">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="engine\engine.h">
       <Filter>源文件\engine</Filter>
     </ClInclude>
+    <ClInclude Include="editor\editor.h">
+      <Filter>源文件\Editor\include</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\ui\window_ui.h">
+      <Filter>源文件\engine\Runtime\ui</Filter>
+    </ClInclude>
     <ClInclude Include="editor\editor_ui.h">
       <Filter>源文件\Editor\include</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\Render\RHI\dx12\dx12_rhi.h">
+      <Filter>源文件\engine\Runtime\Render\rhi</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\Render\rhi.h">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\Render\render_system.h">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\Render\window_system.h">
+      <Filter>源文件\engine\Runtime\Render</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

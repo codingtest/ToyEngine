@@ -1,23 +1,55 @@
 #pragma once
 
-#include <memory>
-#include "..\engine\engine.h"
+//#include "editor/include/axis.h"
+//
+//#include "runtime/core/math/vector2.h"
+//
+//#include "runtime/function/framework/object/object.h"
+#include "..\engine\Runtime\ui\window_ui.h"
+
+//#include "editor/include/editor_file_service.h"
+
+#include <chrono>
+#include <map>
+#include <vector>
+#include <unordered_map>
+#include <functional>
 
 namespace ToyEngine {
-class ToyEngine;
+    class ToyEngineEditor;
+    //class WindowSystem;
+    //class RenderSystem;
 
-class ToyEditor {
+    class EditorUI : public WindowUI
+    {
+    public:
+        EditorUI();
 
-public:
-  ToyEditor();
-  virtual ~ToyEditor();
+    private:
+        //void        onFileContentItemClicked(EditorFileNode* node);
+        //void        buildEditorFileAssetsUITree(EditorFileNode* node);
+        //void        drawAxisToggleButton(const char* string_id, bool check_state, int axis_mode);
+        //void        createComponentUI(Reflection::ReflectionInstance& instance);
+        //void        createLeafNodeUI(Reflection::ReflectionInstance& instance);
+        //std::string getLeafUINodeParentLabel();
 
-  void initialize(ToyEngine *engine_runtime);
-  void clear();
+        void showEditorUI();
+        void showEditorMenu(bool* p_open);
+       /* void showEditorWorldObjectsWindow(bool* p_open);
+        void showEditorFileContentWindow(bool* p_open);
+        void showEditorGameWindow(bool* p_open);
+        void showEditorDetailWindow(bool* p_open);
 
-  void run();
+        void setUIColorStyle();*/
 
-protected:
-  ToyEngine * m_EngineRuntime = NULL;
-};
+    public:
+        virtual void initialize(WindowUIInitInfo init_info) override final;
+        virtual void preRender() override final;
+
+    private:
+        std::unordered_map<std::string, std::function<void(std::string, void*)>> m_editor_ui_creator;
+        std::unordered_map<std::string, unsigned int>                            m_new_object_index_map;
+        //EditorFileService                                  m_editor_file_service;
+        //std::chrono::time_point<std::chrono::steady_clock> m_last_file_tree_update;
+    };
 } // namespace Pilot
