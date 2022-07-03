@@ -19,6 +19,9 @@ namespace ToyEngine
         virtual void initialize(/*RHIInitInfo init_info*/) override final;
         virtual void prepareContext() override final;
 
+        void createInstance();
+        void initializePhysicalDevice();
+
         // command
        /* VkCommandBuffer beginSingleTimeCommands();
         void            endSingleTimeCommands(VkCommandBuffer command_buffer);*/
@@ -158,4 +161,4 @@ namespace ToyEngine
 
         VkDebugUtilsMessengerEXT m_debug_messenger {VK_NULL_HANDLE};*/
     };
-} // namespace Pilot
+} // namespace ToyEngine

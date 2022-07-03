@@ -37,6 +37,12 @@
     <Filter Include="源文件\engine\Runtime\Render\rhi">
       <UniqueIdentifier>{e580e0eb-0b52-4de1-9e97-bab3be2bec9d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\engine\Runtime\core">
+      <UniqueIdentifier>{f2cc0e70-7023-4b8b-addc-5dad1a25047d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\engine\Runtime\core\math">
+      <UniqueIdentifier>{ddcb6d97-b9bd-452e-a7ed-5f05c6c37da7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="engine\engine.cpp">
@@ -69,6 +75,33 @@
     <ClCompile Include="engine\Runtime\Render\window_system.cpp">
       <Filter>源文件\engine\Runtime\Render</Filter>
     </ClCompile>
+    <ClCompile Include="engine\Runtime\Render\RHI\dx12\test.cpp">
+      <Filter>源文件\engine\Runtime\Render\rhi</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\core\math\axis_aligned.cpp">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\core\math\math.cpp">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\core\math\matrix3.cpp">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\core\math\matrix4.cpp">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\core\math\quaternion.cpp">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\core\math\vector2.cpp">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\core\math\vector3.cpp">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\core\math\vector4.cpp">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="engine\engine.h">
@@ -94,6 +127,42 @@
     </ClInclude>
     <ClInclude Include="engine\Runtime\Render\window_system.h">
       <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\core\math\axis_aligned.h">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\core\math\math.h">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\core\math\math_headers.h">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\core\math\math_marcos.h">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\core\math\matrix3.h">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\core\math\matrix4.h">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\core\math\quaternion.h">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\core\math\random.h">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\core\math\transform.h">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\core\math\vector2.h">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\core\math\vector3.h">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\core\math\vector4.h">
+      <Filter>源文件\engine\Runtime\core\math</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -45,5 +45,15 @@ namespace ToyEngine
 
   }
 
+  void Dx12::createInstance()
+  {
+
+  }
+
+
+  void Dx12::initializePhysicalDevice()
+  {
+
+  }
 
 } // namespace ToyEngine

@@ -4,12 +4,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ToyEngine", "ToyEngine.vcxproj", "{9BD0A002-E3CF-4053-B89D-057750D9D215}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CDADC810-BC7A-4858-929C-667BE9840E95} = {CDADC810-BC7A-4858-929C-667BE9840E95}
+		{EF6085A9-B4E5-44B3-888D-B75D0AC7C70E} = {EF6085A9-B4E5-44B3-888D-B75D0AC7C70E}
+		{F17CB5AB-EF56-4B1C-A259-8B13FF373228} = {F17CB5AB-EF56-4B1C-A259-8B13FF373228}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tinyobj", "3rdParty\tinyobj\tinyobj.vcxproj", "{EF6085A9-B4E5-44B3-888D-B75D0AC7C70E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3rdParty", "3rdParty", "{69EB63FE-B8E0-4DF2-A397-4084D6846BE6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "imgui", "3rdParty\imgui\imgui.vcxproj", "{F17CB5AB-EF56-4B1C-A259-8B13FF373228}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "json11", "3rdParty\json11\json11.vcxproj", "{CDADC810-BC7A-4858-929C-667BE9840E95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +50,14 @@ Global
 		{F17CB5AB-EF56-4B1C-A259-8B13FF373228}.Release|x64.Build.0 = Release|x64
 		{F17CB5AB-EF56-4B1C-A259-8B13FF373228}.Release|x86.ActiveCfg = Release|Win32
 		{F17CB5AB-EF56-4B1C-A259-8B13FF373228}.Release|x86.Build.0 = Release|Win32
+		{CDADC810-BC7A-4858-929C-667BE9840E95}.Debug|x64.ActiveCfg = Debug|x64
+		{CDADC810-BC7A-4858-929C-667BE9840E95}.Debug|x64.Build.0 = Debug|x64
+		{CDADC810-BC7A-4858-929C-667BE9840E95}.Debug|x86.ActiveCfg = Debug|Win32
+		{CDADC810-BC7A-4858-929C-667BE9840E95}.Debug|x86.Build.0 = Debug|Win32
+		{CDADC810-BC7A-4858-929C-667BE9840E95}.Release|x64.ActiveCfg = Release|x64
+		{CDADC810-BC7A-4858-929C-667BE9840E95}.Release|x64.Build.0 = Release|x64
+		{CDADC810-BC7A-4858-929C-667BE9840E95}.Release|x86.ActiveCfg = Release|Win32
+		{CDADC810-BC7A-4858-929C-667BE9840E95}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +65,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EF6085A9-B4E5-44B3-888D-B75D0AC7C70E} = {69EB63FE-B8E0-4DF2-A397-4084D6846BE6}
 		{F17CB5AB-EF56-4B1C-A259-8B13FF373228} = {69EB63FE-B8E0-4DF2-A397-4084D6846BE6}
+		{CDADC810-BC7A-4858-929C-667BE9840E95} = {69EB63FE-B8E0-4DF2-A397-4084D6846BE6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {395E8166-158B-461B-920D-7870A0FA9244}
