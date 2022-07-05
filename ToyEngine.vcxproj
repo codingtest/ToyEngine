@@ -37,7 +37,6 @@
     <ClCompile Include="engine\Runtime\Render\RHI\dx12\dx12_rhi.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="engine\Runtime\Render\RHI\dx12\test.cpp" />
     <ClCompile Include="engine\Runtime\Render\window_system.cpp" />
     <ClCompile Include="engine\Runtime\ui\window_ui.cpp" />
   </ItemGroup>

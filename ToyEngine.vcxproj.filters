@@ -75,9 +75,6 @@
     <ClCompile Include="engine\Runtime\Render\window_system.cpp">
       <Filter>源文件\engine\Runtime\Render</Filter>
     </ClCompile>
-    <ClCompile Include="engine\Runtime\Render\RHI\dx12\test.cpp">
-      <Filter>源文件\engine\Runtime\Render\rhi</Filter>
-    </ClCompile>
     <ClCompile Include="engine\Runtime\core\math\axis_aligned.cpp">
       <Filter>源文件\engine\Runtime\core\math</Filter>
     </ClCompile>
