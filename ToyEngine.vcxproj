@@ -32,11 +32,13 @@
     <ClCompile Include="engine\Runtime\core\math\vector2.cpp" />
     <ClCompile Include="engine\Runtime\core\math\vector3.cpp" />
     <ClCompile Include="engine\Runtime\core\math\vector4.cpp" />
+    <ClCompile Include="engine\Runtime\function\global_context.cpp" />
     <ClCompile Include="engine\Runtime\Render\render_system.cpp" />
     <ClCompile Include="engine\Runtime\Render\rhi.cpp" />
     <ClCompile Include="engine\Runtime\Render\RHI\dx12\dx12_rhi.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="engine\Runtime\Render\ui_pass.cpp" />
     <ClCompile Include="engine\Runtime\Render\window_system.cpp" />
     <ClCompile Include="engine\Runtime\ui\window_ui.cpp" />
   </ItemGroup>
@@ -56,9 +58,11 @@
     <ClInclude Include="engine\Runtime\core\math\vector2.h" />
     <ClInclude Include="engine\Runtime\core\math\vector3.h" />
     <ClInclude Include="engine\Runtime\core\math\vector4.h" />
+    <ClInclude Include="engine\Runtime\function\global_context.h" />
     <ClInclude Include="engine\Runtime\Render\render_system.h" />
     <ClInclude Include="engine\Runtime\Render\rhi.h" />
     <ClInclude Include="engine\Runtime\Render\RHI\dx12\dx12_rhi.h" />
+    <ClInclude Include="engine\Runtime\Render\ui_pass.h" />
     <ClInclude Include="engine\Runtime\Render\window_system.h" />
     <ClInclude Include="engine\Runtime\ui\window_ui.h" />
   </ItemGroup>
@@ -168,7 +172,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <PerUserRedirection>true</PerUserRedirection>
       <AdditionalLibraryDirectories>.\x64\debug\</AdditionalLibraryDirectories>
-      <AdditionalDependencies>imgui.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>imgui.lib;d3d12.lib;d3dcompiler.lib;dxgi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

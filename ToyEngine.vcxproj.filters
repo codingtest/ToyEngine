@@ -43,6 +43,9 @@
     <Filter Include="源文件\engine\Runtime\core\math">
       <UniqueIdentifier>{ddcb6d97-b9bd-452e-a7ed-5f05c6c37da7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\engine\Runtime\function">
+      <UniqueIdentifier>{da88d8a4-c54a-4299-8d20-a3e18c90630d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="engine\engine.cpp">
@@ -98,6 +101,12 @@
     </ClCompile>
     <ClCompile Include="engine\Runtime\core\math\vector4.cpp">
       <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\function\global_context.cpp">
+      <Filter>源文件\engine\Runtime\function</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\Render\ui_pass.cpp">
+      <Filter>源文件\engine\Runtime\Render</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +169,12 @@
     </ClInclude>
     <ClInclude Include="engine\Runtime\core\math\vector4.h">
       <Filter>源文件\engine\Runtime\core\math</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\function\global_context.h">
+      <Filter>源文件\engine\Runtime\function</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\Render\ui_pass.h">
+      <Filter>源文件\engine\Runtime\Render</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

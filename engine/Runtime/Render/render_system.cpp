@@ -120,6 +120,11 @@ namespace ToyEngine
         //}
     }
 
+    void RenderSystem::initializeUIRenderBackend(WindowUI* window_ui)
+    {
+      //m_render_pipeline->initializeUIRenderBackend(window_ui);
+    }
+
     void RenderSystem::swapLogicRenderData() {/* m_swap_context.swapLogicRenderData();*/ }
 
    // RenderSwapContext& RenderSystem::getSwapContext() { return m_swap_context; }

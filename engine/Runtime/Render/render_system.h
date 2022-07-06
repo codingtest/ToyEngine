@@ -17,7 +17,7 @@ namespace ToyEngine
     //class RenderPipelineBase;
     //class RenderScene;
     //class RenderCamera;
-    //class WindowUI;
+    class WindowUI;
 
     struct RenderSystemInitInfo
     {
@@ -46,7 +46,7 @@ namespace ToyEngine
         //std::shared_ptr<RenderCamera> getRenderCamera() const;
 
         //void      setRenderPipelineType(RENDER_PIPELINE_TYPE pipeline_type);
-        //void      initializeUIRenderBackend(WindowUI* window_ui);
+        void      initializeUIRenderBackend(WindowUI* window_ui);
         //void      updateEngineContentViewport(float offset_x, float offset_y, float width, float height);
         //uint32_t  getGuidOfPickedMesh(const Vector2& picked_uv);
         //GObjectID getGObjectIDByMeshID(uint32_t mesh_id) const;
