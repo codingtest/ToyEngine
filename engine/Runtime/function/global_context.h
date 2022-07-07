@@ -40,5 +40,5 @@ namespace ToyEngine
         std::shared_ptr<RenderSystem>   m_render_system;
     };
 
-   // extern RuntimeGlobalContext g_runtime_global_context;
+    extern RuntimeGlobalContext g_runtime_global_context;
 } // namespace ToyEngine

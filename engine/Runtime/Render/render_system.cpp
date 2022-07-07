@@ -6,12 +6,12 @@
 //#include "runtime/resource/config_manager/config_manager.h"
 //
 //#include "runtime/function/render/render_camera.h"
-//#include "runtime/function/render/render_pass.h"
-//#include "runtime/function/render/render_pipeline.h"
+#include "runtime/render/render_pass.h"
+#include "runtime/render/render_pipeline.h"
 //#include "runtime/function/render/render_resource.h"
 //#include "runtime/function/render/render_resource_base.h"
 //#include "runtime/function/render/render_scene.h"
-//#include "runtime/function/render/window_system.h"
+#include "runtime/render/window_system.h"
 
 //#include "runtime/function/render/passes/main_camera_pass.h"
 
@@ -21,7 +21,7 @@ namespace ToyEngine
 {
     RenderSystem::~RenderSystem() {}
 
-    void RenderSystem::initialize(/*RenderSystemInitInfo init_info*/)
+    void RenderSystem::initialize(RenderSystemInitInfo init_info)
     {
         //std::shared_ptr<ConfigManager> config_manager = g_runtime_global_context.m_config_manager;
         //ASSERT(config_manager);
@@ -69,12 +69,12 @@ namespace ToyEngine
         //m_render_scene->setVisibleNodesReference();
 
         //// initialize render pipeline
-        //RenderPipelineInitInfo pipeline_init_info;
+        RenderPipelineInitInfo pipeline_init_info;
         //pipeline_init_info.render_resource = m_render_resource;
 
-        //m_render_pipeline        = std::make_shared<RenderPipeline>();
+        m_render_pipeline        = std::make_shared<RenderPipeline>();
         //m_render_pipeline->m_rhi = m_rhi;
-        //m_render_pipeline->initialize(pipeline_init_info);
+        m_render_pipeline->initialize(pipeline_init_info);
 
         //// descriptor set layout in main camera pass will be used when uploading resource
         //std::static_pointer_cast<RenderResource>(m_render_resource)->m_mesh_descriptor_set_layout =
@@ -122,7 +122,7 @@ namespace ToyEngine
 
     void RenderSystem::initializeUIRenderBackend(WindowUI* window_ui)
     {
-      //m_render_pipeline->initializeUIRenderBackend(window_ui);
+      m_render_pipeline->initializeUIRenderBackend(window_ui);
     }
 
     void RenderSystem::swapLogicRenderData() {/* m_swap_context.swapLogicRenderData();*/ }

@@ -3,13 +3,13 @@
 #include <memory>
 
 namespace ToyEngine {
-    //class WindowSystem;
-    //class RenderSystem;
+    class WindowSystem;
+    class RenderSystem;
 
     struct WindowUIInitInfo
     {
-        //std::shared_ptr<WindowSystem> window_system;
-        //std::shared_ptr<RenderSystem> render_system;
+        std::shared_ptr<WindowSystem> window_system;
+        std::shared_ptr<RenderSystem> render_system;
     };
 
     class WindowUI

@@ -5,6 +5,9 @@
 //#include "runtime/function/render/render_swap_context.h"
 //#include "runtime/function/render/render_type.h"
 
+#include "runtime/render/render_pass_base.h"
+#include "runtime/render/render_pipeline_base.h"
+
 #include <array>
 #include <memory>
 #include <optional>
@@ -38,7 +41,7 @@ namespace ToyEngine
         RenderSystem() = default;
         ~RenderSystem();
 
-        void initialize(/*RenderSystemInitInfo init_info*/);
+        void initialize(RenderSystemInitInfo init_info);
         void tick();
 
         void                          swapLogicRenderData();
@@ -48,7 +51,7 @@ namespace ToyEngine
         //void      setRenderPipelineType(RENDER_PIPELINE_TYPE pipeline_type);
         void      initializeUIRenderBackend(WindowUI* window_ui);
         //void      updateEngineContentViewport(float offset_x, float offset_y, float width, float height);
-        //uint32_t  getGuidOfPickedMesh(const Vector2& picked_uv);
+        uint32_t  getGuidOfPickedMesh(const Vector2& picked_uv);
         //GObjectID getGObjectIDByMeshID(uint32_t mesh_id) const;
 
        // EngineContentViewport getEngineContentViewport() const;
@@ -70,7 +73,7 @@ namespace ToyEngine
         //std::shared_ptr<RenderCamera>       m_render_camera;
         //std::shared_ptr<RenderScene>        m_render_scene;
         //std::shared_ptr<RenderResourceBase> m_render_resource;
-        //std::shared_ptr<RenderPipelineBase> m_render_pipeline;
+        std::shared_ptr<RenderPipelineBase> m_render_pipeline;
 
      //   void processSwapData();
     };

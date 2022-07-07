@@ -46,6 +46,9 @@
     <Filter Include="源文件\engine\Runtime\function">
       <UniqueIdentifier>{da88d8a4-c54a-4299-8d20-a3e18c90630d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\engine\Runtime\Render\renderpass">
+      <UniqueIdentifier>{8fb72704-5267-4c43-82f9-54c9efe2b6af}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="engine\engine.cpp">
@@ -56,9 +59,6 @@
     </ClCompile>
     <ClCompile Include="editor\main.cpp">
       <Filter>源文件\Editor\source</Filter>
-    </ClCompile>
-    <ClCompile Include="engine\Render_pass.cpp">
-      <Filter>源文件\engine\Runtime\Render</Filter>
     </ClCompile>
     <ClCompile Include="engine\Runtime\ui\window_ui.cpp">
       <Filter>源文件\engine\Runtime\ui</Filter>
@@ -106,6 +106,18 @@
       <Filter>源文件\engine\Runtime\function</Filter>
     </ClCompile>
     <ClCompile Include="engine\Runtime\Render\ui_pass.cpp">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\Render\render_pass_base.cpp">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\Render\render_pipeline.cpp">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\Render\render_pipeline_base.cpp">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Runtime\Render\render_pass.cpp">
       <Filter>源文件\engine\Runtime\Render</Filter>
     </ClCompile>
   </ItemGroup>
@@ -174,6 +186,18 @@
       <Filter>源文件\engine\Runtime\function</Filter>
     </ClInclude>
     <ClInclude Include="engine\Runtime\Render\ui_pass.h">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\Render\render_pass_base.h">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\Render\render_pipeline.h">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\Render\render_pipeline_base.h">
+      <Filter>源文件\engine\Runtime\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Runtime\Render\render_pass.h">
       <Filter>源文件\engine\Runtime\Render</Filter>
     </ClInclude>
   </ItemGroup>

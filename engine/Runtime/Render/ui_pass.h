@@ -1,6 +1,6 @@
 #pragma once
 
-//#include "runtime/function/render/render_pass.h"
+#include "runtime/render/render_pass.h"
 
 #include <d3d12.h>
 #include <dxgi1_4.h>
@@ -9,15 +9,15 @@ namespace ToyEngine
 {
     class WindowUI;
 
-    //struct UIPassInitInfo : RenderPassInitInfo
-    //{
-    //    //VkRenderPass render_pass;
-    //};
+    struct UIPassInitInfo : RenderPassInitInfo
+    {
+        //VkRenderPass render_pass;
+    };
 
-    class UIPass /*: public RenderPass*/
+    class UIPass : public RenderPass
     {
     public:
-        void initialize(/*const RenderPassInitInfo* init_info*/)/* override final*/;
+        void initialize(const RenderPassInitInfo* init_info)/* override final*/;
         void initializeUIRenderBackend(WindowUI* window_ui) /*override final*/;
         void draw() /*override final*/;
 

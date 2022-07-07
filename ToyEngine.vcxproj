@@ -23,7 +23,6 @@
     <ClCompile Include="editor\editor_ui.cpp" />
     <ClCompile Include="editor\main.cpp" />
     <ClCompile Include="engine\engine.cpp" />
-    <ClCompile Include="engine\Render_pass.cpp" />
     <ClCompile Include="engine\Runtime\core\math\axis_aligned.cpp" />
     <ClCompile Include="engine\Runtime\core\math\math.cpp" />
     <ClCompile Include="engine\Runtime\core\math\matrix3.cpp" />
@@ -33,6 +32,10 @@
     <ClCompile Include="engine\Runtime\core\math\vector3.cpp" />
     <ClCompile Include="engine\Runtime\core\math\vector4.cpp" />
     <ClCompile Include="engine\Runtime\function\global_context.cpp" />
+    <ClCompile Include="engine\Runtime\Render\render_pass.cpp" />
+    <ClCompile Include="engine\Runtime\Render\render_pass_base.cpp" />
+    <ClCompile Include="engine\Runtime\Render\render_pipeline.cpp" />
+    <ClCompile Include="engine\Runtime\Render\render_pipeline_base.cpp" />
     <ClCompile Include="engine\Runtime\Render\render_system.cpp" />
     <ClCompile Include="engine\Runtime\Render\rhi.cpp" />
     <ClCompile Include="engine\Runtime\Render\RHI\dx12\dx12_rhi.cpp">
@@ -59,6 +62,10 @@
     <ClInclude Include="engine\Runtime\core\math\vector3.h" />
     <ClInclude Include="engine\Runtime\core\math\vector4.h" />
     <ClInclude Include="engine\Runtime\function\global_context.h" />
+    <ClInclude Include="engine\Runtime\Render\render_pass.h" />
+    <ClInclude Include="engine\Runtime\Render\render_pass_base.h" />
+    <ClInclude Include="engine\Runtime\Render\render_pipeline.h" />
+    <ClInclude Include="engine\Runtime\Render\render_pipeline_base.h" />
     <ClInclude Include="engine\Runtime\Render\render_system.h" />
     <ClInclude Include="engine\Runtime\Render\rhi.h" />
     <ClInclude Include="engine\Runtime\Render\RHI\dx12\dx12_rhi.h" />

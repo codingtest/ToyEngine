@@ -1,10 +1,10 @@
 #pragma once
 
-#include <GLFW/glfw3.h>
 
 #include <array>
 #include <functional>
 #include <vector>
+#include <windows.h>
 
 namespace ToyEngine
 {
@@ -25,7 +25,7 @@ namespace ToyEngine
         void               pollEvents() const;
         bool               shouldClose() const;
         void               setTile(const char* title);
-        GLFWwindow*        getWindow() const;
+        void               getWindow() const;
         std::array<int, 2> getWindowSize() const;
 
         typedef std::function<void()>                   onResetFunc;
@@ -54,18 +54,19 @@ namespace ToyEngine
 
         bool isMouseButtonDown(int button) const
         {
-            if (button < GLFW_MOUSE_BUTTON_1 || button > GLFW_MOUSE_BUTTON_LAST)
+          return false;
+            /*if (button < GLFW_MOUSE_BUTTON_1 || button > GLFW_MOUSE_BUTTON_LAST)
             {
                 return false;
             }
-            return glfwGetMouseButton(m_window, button) == GLFW_PRESS;
+            return glfwGetMouseButton(m_window, button) == GLFW_PRESS;*/
         }
         bool getFocusMode() const { return m_is_focus_mode; }
         void setFocusMode(bool mode);
 
     protected:
         // window event callbacks
-        static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
+        /*static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
         {
             WindowSystem* app = (WindowSystem*)glfwGetWindowUserPointer(window);
             if (app)
@@ -138,7 +139,7 @@ namespace ToyEngine
                 app->m_height = height;
             }
         }
-        static void windowCloseCallback(GLFWwindow* window) { glfwSetWindowShouldClose(window, true); }
+        static void windowCloseCallback(GLFWwindow* window) { glfwSetWindowShouldClose(window, true); }*/
 
         void onReset()
         {
@@ -192,7 +193,7 @@ namespace ToyEngine
         }
 
     private:
-        GLFWwindow* m_window {nullptr};
+        HWND m_window  = nullptr;
         int         m_width {0};
         int         m_height {0};
 

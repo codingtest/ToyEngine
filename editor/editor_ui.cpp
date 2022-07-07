@@ -12,17 +12,17 @@
 //#include "runtime/resource/asset_manager/asset_manager.h"
 //#include "runtime/resource/config_manager/config_manager.h"
 //
-//#include "runtime/engine.h"
+#include "engine.h"
 //
 //#include "runtime/function/framework/component/mesh/mesh_component.h"
 //#include "runtime/function/framework/component/transform/transform_component.h"
 //#include "runtime/function/framework/level/level.h"
 //#include "runtime/function/framework/world/world_manager.h"
-//#include "runtime/function/global/global_context.h"
+#include "runtime/function/global_context.h"
 //#include "runtime/function/input/input_system.h"
 //#include "runtime/function/render/render_camera.h"
-//#include "runtime/function/render/render_system.h"
-//#include "runtime/function/render/window_system.h"
+#include "runtime/render/render_system.h"
+#include "runtime/render/window_system.h"
 
 #include <imgui.h>
 #include <imgui_internal.h>
@@ -646,7 +646,7 @@ namespace ToyEngine
         stbi_image_free(window_icon[1].pixels);*/
 
         // initialize imgui vulkan render backend, 这个地方开始有UI
-       // init_info.render_system->initializeUIRenderBackend(this);
+        init_info.render_system->initializeUIRenderBackend(this);
     }
 
 #if 0

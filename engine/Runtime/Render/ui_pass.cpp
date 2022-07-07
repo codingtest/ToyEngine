@@ -14,41 +14,41 @@ extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg
 
 namespace ToyEngine
 {
-    void UIPass::initialize(/*const RenderPassInitInfo* init_info*/)
+    void UIPass::initialize(const RenderPassInitInfo* init_info)
     {
-        //RenderPass::initialize(nullptr);
+        RenderPass::initialize(nullptr);
 
         //m_framebuffer.render_pass = static_cast<const UIPassInitInfo*>(init_info)->render_pass;
     }
 
-    // Win32 message handler
-    LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
-    {
-      if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam))
-        return true;
+    //// Win32 message handler
+    //LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
+    //{
+    //  if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam))
+    //    return true;
 
-      switch (msg)
-      {
-      case WM_SIZE:
-      /*  if (g_pd3dDevice != NULL && wParam != SIZE_MINIMIZED)
-        {
-          WaitForLastSubmittedFrame();
-          CleanupRenderTarget();
-          HRESULT result = g_pSwapChain->ResizeBuffers(0, (UINT)LOWORD(lParam), (UINT)HIWORD(lParam), DXGI_FORMAT_UNKNOWN, DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT);
-          assert(SUCCEEDED(result) && "Failed to resize swapchain.");
-          CreateRenderTarget();
-        }*/
-        return 0;
-      case WM_SYSCOMMAND:
-        if ((wParam & 0xfff0) == SC_KEYMENU) // Disable ALT application menu
-          return 0;
-        break;
-      case WM_DESTROY:
-        ::PostQuitMessage(0);
-        return 0;
-      }
-      return ::DefWindowProc(hWnd, msg, wParam, lParam);
-    }
+    //  switch (msg)
+    //  {
+    //  case WM_SIZE:
+    //  /*  if (g_pd3dDevice != NULL && wParam != SIZE_MINIMIZED)
+    //    {
+    //      WaitForLastSubmittedFrame();
+    //      CleanupRenderTarget();
+    //      HRESULT result = g_pSwapChain->ResizeBuffers(0, (UINT)LOWORD(lParam), (UINT)HIWORD(lParam), DXGI_FORMAT_UNKNOWN, DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT);
+    //      assert(SUCCEEDED(result) && "Failed to resize swapchain.");
+    //      CreateRenderTarget();
+    //    }*/
+    //    return 0;
+    //  case WM_SYSCOMMAND:
+    //    if ((wParam & 0xfff0) == SC_KEYMENU) // Disable ALT application menu
+    //      return 0;
+    //    break;
+    //  case WM_DESTROY:
+    //    ::PostQuitMessage(0);
+    //    return 0;
+    //  }
+    //  return ::DefWindowProc(hWnd, msg, wParam, lParam);
+    //}
 
 
     bool UIPass::CreateDeviceD3D(HWND hWnd)
@@ -198,11 +198,10 @@ namespace ToyEngine
     {
         m_window_ui = window_ui;
 
-        //改成D3d的API
-        WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, L"ToyEngine", NULL };
-        ::RegisterClassEx(&wc);
-        HWND hwnd = ::CreateWindow(wc.lpszClassName, L"ToyEngine", WS_OVERLAPPEDWINDOW, 100, 100, 1280, 800, NULL, NULL, wc.hInstance, NULL);
+        //改成D3d的API 
+        //这个地方要去掉
 
+        
         // Initialize Direct3D
         if (!CreateDeviceD3D(hwnd))
         {
@@ -211,9 +210,6 @@ namespace ToyEngine
           return ;
         }
 
-        // Show the window
-        ::ShowWindow(hwnd, SW_SHOWDEFAULT);
-        ::UpdateWindow(hwnd);
 
         // Setup Dear ImGui context
         IMGUI_CHECKVERSION();
